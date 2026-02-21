@@ -1,0 +1,238 @@
+# =============================================================================
+# GioSMS WHMCS Module — .gitignore
+# Developed and maintained by Riyad Munauwar — GioSMS
+# https://giosms.com | https://github.com/riyadMunauwar/giosms-whmcs
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Operating System Files
+# -----------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+
+# -----------------------------------------------------------------------------
+# IDE & Editor Files
+# -----------------------------------------------------------------------------
+
+# JetBrains (PhpStorm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+tags
+
+# Emacs
+*#
+.#*
+.\#*
+
+# Eclipse
+.project
+.classpath
+.settings/
+.buildpath
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+
+# -----------------------------------------------------------------------------
+# PHP & Composer
+# (Module intentionally uses no Composer — but guard against accidental addition)
+# -----------------------------------------------------------------------------
+
+/vendor/
+/composer.lock
+/composer.phar
+composer.lock
+
+
+# -----------------------------------------------------------------------------
+# Environment & Configuration Secrets
+# (Never commit API keys, tokens, or local config)
+# -----------------------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+*.local
+config.local.php
+local.config.php
+secrets.php
+
+
+# -----------------------------------------------------------------------------
+# WHMCS Installation Files
+# (This repo ships only the module — not the full WHMCS installation)
+# -----------------------------------------------------------------------------
+
+# WHMCS root files that may exist in a local dev setup
+/configuration.php
+/configuration.php.new
+/whmcs.license
+
+# WHMCS directories that should never be committed
+/admin/
+/crons/
+/downloads/
+/includes/
+/install/
+/lang/
+/resources/
+/storage/
+/templates/
+/vendor/
+/attachments/
+/backups/
+/cache/
+
+# Template caches
+/templates_c/
+smarty_cache/
+smarty_compile/
+
+
+# -----------------------------------------------------------------------------
+# Logs & Temporary Files
+# -----------------------------------------------------------------------------
+
+*.log
+*.logs
+logs/
+log/
+tmp/
+temp/
+cache/
+*.cache
+*.tmp
+*.bak
+*.backup
+*.orig
+*.rej
+
+
+# -----------------------------------------------------------------------------
+# Test & Development Artifacts
+# -----------------------------------------------------------------------------
+
+/tests/coverage/
+/.phpunit.result.cache
+phpunit.xml.local
+phpunit.xml.dist.local
+
+# Static analysis
+/.phpstan/
+/phpstan.neon.local
+
+# Node (if any tooling is added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+
+# -----------------------------------------------------------------------------
+# Build & Release Artifacts
+# -----------------------------------------------------------------------------
+
+/dist/
+/build/
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# Exception: keep any pre-packaged release zips that are intentionally committed
+# !releases/*.zip
+
+
+# -----------------------------------------------------------------------------
+# Documentation Build Output
+# (Source docs are committed; generated/built output is not)
+# -----------------------------------------------------------------------------
+
+/docs/_build/
+/docs/site/
+/site/
+
+
+# -----------------------------------------------------------------------------
+# Reference Module
+# (The reference/ directory is a local development aid — not for public release)
+# -----------------------------------------------------------------------------
+
+/reference/
+
+
+# -----------------------------------------------------------------------------
+# Miscellaneous
+# -----------------------------------------------------------------------------
+
+# Patch files
+*.patch
+*.diff
+
+# Archives
+*.dmg
+*.iso
+*.jar
+
+# Database dumps
+*.sql
+*.sql.gz
+
+# SSH keys (safety net)
+*.pem
+*.ppk
+*.key
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
